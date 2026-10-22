@@ -2,8 +2,8 @@ document.querySelectorAll('a[href^="#"]').forEach(link=>{link.addEventListener('
 const contactCard=document.querySelector('#contact-card');
 const copyButton=document.querySelector('[data-copy]');
 if(copyButton){copyButton.addEventListener('click',async event=>{const button=event.currentTarget;await navigator.clipboard.writeText(button.dataset.copy);const label=button.querySelector('b');label.textContent='copied';setTimeout(()=>label.textContent='copy',1200)})}
-const langToggle=document.querySelector('#lang-toggle');
+const languageSelect=document.querySelector('#language-select');
 const translatable=document.querySelectorAll('[data-zh][data-en]');
 let language='zh';
-function applyLanguage(){translatable.forEach(node=>{node.textContent=language==='zh'?node.dataset.zh:node.dataset.en});if(langToggle){langToggle.textContent=language==='zh'?'EN':'中文';langToggle.setAttribute('aria-label',language==='zh'?'Switch to English':'切换为中文')}document.documentElement.lang=language==='zh'?'zh-CN':'en'}
-if(langToggle){langToggle.addEventListener('click',()=>{language=language==='zh'?'en':'zh';applyLanguage()});applyLanguage()}
+function applyLanguage(){translatable.forEach(node=>{node.textContent=language==='zh'?node.dataset.zh:node.dataset.en});if(languageSelect){languageSelect.value=language;languageSelect.setAttribute('aria-label',language==='zh'?'选择语言':'Select language')}document.documentElement.lang=language==='zh'?'zh-CN':'en'}
+if(languageSelect){languageSelect.addEventListener('change',event=>{language=event.target.value;applyLanguage()});applyLanguage()}
