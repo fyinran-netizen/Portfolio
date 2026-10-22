@@ -2,7 +2,9 @@ const state = {
   language: 'zh',
 };
 
-const languageSelect = document.querySelector('#language-select');
+const languageSwitcher = document.querySelector('#language-switcher');
+const languageTrigger = document.querySelector('#language-trigger');
+const languageMenu = document.querySelector('#language-menu');
 const translatableNodes = document.querySelectorAll('[data-zh][data-en]');
 
 function applyLanguage() {
@@ -12,23 +14,44 @@ function applyLanguage() {
     node.textContent = node.dataset[textKey];
   });
 
-  if (languageSelect) {
-    languageSelect.value = state.language;
-    languageSelect.setAttribute(
-      'aria-label',
-      state.language === 'zh' ? '选择语言' : 'Select language',
-    );
-  }
+  languageMenu?.querySelectorAll('[data-language]').forEach((option) => {
+    option.setAttribute('aria-current', String(option.dataset.language === state.language));
+  });
 
   document.documentElement.lang = state.language === 'zh' ? 'zh-CN' : 'en';
 }
 
 function setupLanguageSwitch() {
-  if (!languageSelect) return;
+  if (!languageSwitcher || !languageTrigger || !languageMenu) return;
 
-  languageSelect.addEventListener('change', (event) => {
-    state.language = event.target.value;
-    applyLanguage();
+  const closeMenu = () => {
+    languageMenu.hidden = true;
+    languageTrigger.setAttribute('aria-expanded', 'false');
+  };
+
+  languageTrigger.addEventListener('click', () => {
+    languageMenu.hidden = !languageMenu.hidden;
+    languageTrigger.setAttribute('aria-expanded', String(!languageMenu.hidden));
+  });
+
+  languageMenu.querySelectorAll('[data-language]').forEach((option) => {
+    option.addEventListener('click', () => {
+      state.language = option.dataset.language;
+      applyLanguage();
+      closeMenu();
+      languageTrigger.focus();
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!languageSwitcher.contains(event.target)) closeMenu();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !languageMenu.hidden) {
+      closeMenu();
+      languageTrigger.focus();
+    }
   });
 
   applyLanguage();

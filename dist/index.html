@@ -1,31 +1,103 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="YINRAN_FENG — AI 产品与交互作品集" /><title>YINRAN_FENG — Selected Works</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="YINRAN FENG — AI 产品与交互作品集" />
+  <title>YINRAN FENG — Selected Works</title>
+  <link rel="stylesheet" href="./fonts/nunito/index.css" />
+  <link rel="stylesheet" href="./fonts/noto-sans-sc/index.css" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <div class="grain"></div>
-  <header class="nav wrap"><a class="name" href="#top" data-zh="冯音然" data-en="YINRAN_FENG">YINRAN_FENG</a><span class="nav-note" data-zh="作品集 / 2026" data-en="SELECTED WORKS / 2026">SELECTED WORKS / 2026</span></header>
-  <label class="language-switcher" id="language-switcher"><span data-zh="语言" data-en="LANGUAGE">LANGUAGE</span><select id="language-select" aria-label="Language"><option value="zh">中文</option><option value="en">English</option></select></label>
-  <main id="top" class="wrap">
-    <section class="intro"><p class="kicker" data-zh="AI 产品 · 交互 · 构建" data-en="AI PRODUCT · INTERACTION · BUILDING">AI PRODUCT · INTERACTION · BUILDING</p><h1><span class="intro-main" data-zh="Selected" data-en="Selected">Selected</span><br /><span class="accent" data-zh="Work" data-en="Work">Work</span></h1><aside class="contact-card contact-inline" id="contact-card" aria-hidden="false"><div class="contact-head"><span data-zh="联系方式" data-en="CONTACT">CONTACT</span></div><button class="contact-item" type="button" data-copy="13389261890"><span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.4 4.2c.7-.5 1.7-.3 2.1.5l1.2 2.2c.3.6.2 1.3-.3 1.8L9 9.9c.8 1.7 2.1 3.1 3.8 3.8l1.2-1.4c.5-.5 1.2-.6 1.8-.3l2.2 1.2c.8.4 1 1.4.5 2.1l-.8 1.1c-.5.7-1.3 1-2.1.8-5.2-1.2-9.3-5.3-10.5-10.5-.2-.8.1-1.6.8-2.1l1.1-.8Z"/></svg></span><span><small data-zh="电话" data-en="PHONE">PHONE</small>133 8926 1890</span><b class="copy-label" data-zh="复制" data-en="Copy">Copy</b></button><button class="contact-item" type="button" data-copy="fyinran@gmail.com"><span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5.5h17v13h-17v-13Zm1.5 1.8 6.5 5 6.5-5M5 17l5.2-4M19 17l-5.2-4"/></svg></span><span><small data-zh="邮箱" data-en="EMAIL">EMAIL</small>fyinran@gmail.com</span><b class="copy-label" data-zh="复制" data-en="Copy">Copy</b></button><button class="contact-item" type="button" data-copy="fengyrr"><span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6.5h8.5A3.5 3.5 0 0 1 17 10v2a3.5 3.5 0 0 1-3.5 3.5H9.8L6 18l.7-2.6A3.5 3.5 0 0 1 5 12V6.5Zm9.5 4H18a2.5 2.5 0 0 1 2.5 2.5v2a2.5 2.5 0 0 1-1 2.1l.5 1.8-2.7-1.5H15"/><circle cx="9" cy="10.5" r=".7" fill="currentColor" stroke="none"/><circle cx="12" cy="10.5" r=".7" fill="currentColor" stroke="none"/><circle cx="17" cy="14" r=".65" fill="currentColor" stroke="none"/><circle cx="19" cy="14" r=".65" fill="currentColor" stroke="none"/></svg></span><span><small data-zh="微信" data-en="WECHAT">WECHAT</small>fengyrr</span><b class="copy-label" data-zh="复制" data-en="Copy">Copy</b></button></aside></section>
+  <header class="nav wrap" id="top">
+    <a class="name" href="#top"><span class="name-mark" aria-hidden="true">✳</span><span data-zh="冯音然" data-en="YINRAN FENG">YINRAN FENG</span></a>
+    <div class="nav-right">
+      <span class="nav-note" data-zh="作品集 / 2026" data-en="SELECTED WORKS / 2026">SELECTED WORKS / 2026</span>
+      <div class="language-switcher" id="language-switcher">
+        <button class="language-trigger" id="language-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="language-menu" data-zh="语言" data-en="Language">Language</button>
+        <div class="language-menu" id="language-menu" hidden>
+          <button type="button" data-language="zh" lang="zh-CN">中文</button>
+          <button type="button" data-language="en" lang="en">English</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="intro">
+      <p class="kicker" data-zh="AI 产品 · 交互 · 构建" data-en="AI PRODUCT · INTERACTION · BUILDING">AI PRODUCT · INTERACTION · BUILDING</p>
+      <h1><span class="intro-main" data-zh="Selected" data-en="Selected">Selected</span><br /><span class="accent" data-zh="Work" data-en="Work">Work</span></h1>
+      <aside class="contact-card" id="contact-card">
+        <div class="contact-head"><span data-zh="联系方式" data-en="CONTACT">CONTACT</span></div>
+        <button class="contact-item" type="button" data-copy="13389261890">
+          <span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.4 4.2c.7-.5 1.7-.3 2.1.5l1.2 2.2c.3.6.2 1.3-.3 1.8L9 9.9c.8 1.7 2.1 3.1 3.8 3.8l1.2-1.4c.5-.5 1.2-.6 1.8-.3l2.2 1.2c.8.4 1 1.4.5 2.1l-.8 1.1c-.5.7-1.3 1-2.1.8-5.2-1.2-9.3-5.3-10.5-10.5-.2-.8.1-1.6.8-2.1l1.1-.8Z"/></svg></span>
+          <span><small data-zh="电话" data-en="PHONE">PHONE</small>133 8926 1890</span>
+          <b class="copy-label" data-zh="复制" data-en="Copy">Copy</b>
+        </button>
+        <button class="contact-item" type="button" data-copy="fyinran@gmail.com">
+          <span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5.5h17v13h-17v-13Zm1.5 1.8 6.5 5 6.5-5M5 17l5.2-4M19 17l-5.2-4"/></svg></span>
+          <span><small data-zh="邮箱" data-en="EMAIL">EMAIL</small>fyinran@gmail.com</span>
+          <b class="copy-label" data-zh="复制" data-en="Copy">Copy</b>
+        </button>
+        <button class="contact-item" type="button" data-copy="fengyrr">
+          <span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6.5h8.5A3.5 3.5 0 0 1 17 10v2a3.5 3.5 0 0 1-3.5 3.5H9.8L6 18l.7-2.6A3.5 3.5 0 0 1 5 12V6.5Zm9.5 4H18a2.5 2.5 0 0 1 2.5 2.5v2a2.5 2.5 0 0 1-1 2.1l.5 1.8-2.7-1.5H15"/><circle cx="9" cy="10.5" r=".7" fill="currentColor" stroke="none"/><circle cx="12" cy="10.5" r=".7" fill="currentColor" stroke="none"/><circle cx="17" cy="14" r=".65" fill="currentColor" stroke="none"/><circle cx="19" cy="14" r=".65" fill="currentColor" stroke="none"/></svg></span>
+          <span><small data-zh="微信" data-en="WECHAT">WECHAT</small>fengyrr</span>
+          <b class="copy-label" data-zh="复制" data-en="Copy">Copy</b>
+        </button>
+      </aside>
+    </section>
     <section id="work" class="works">
-      <div class="section-label"><span data-zh="01 — 儿童英语学习应用项目" data-en="01 — CHILDREN’S ENGLISH LEARNING APP">01 — CHILDREN’S ENGLISH LEARNING APP</span><span>COGNIA</span></div>
+      <div class="section-label"><span data-zh="01 — 儿童英语学习应用项目" data-en="01 — CHILDREN’S ENGLISH LEARNING APP">01 — CHILDREN’S ENGLISH LEARNING APP</span><span>CognIA</span></div>
       <a class="feature" href="https://youtube.com/shorts/66WwtDEFVHY" target="_blank" rel="noreferrer">
-        <div class="feature-art"><img class="cognia-square" src="./cognia-final.png" alt="CognIA app interface preview" /><span class="art-label">TEAM PROJECT / 2026</span></div>
-        <div class="feature-copy"><div><h2>CognIA</h2><p class="short-copy" data-zh="面向儿童的英语学习应用，围绕阅读、听力、写作与解码设计学习模块，并参与交互设计与前后端集成。" data-en="A children's English learning app built around reading, listening, writing, and decoding, with work across learning modules, interaction design, and full-stack integration.">面向儿童的英语学习应用，围绕阅读、听力、写作与解码设计学习模块，并参与交互设计与前后端集成。</p></div><span class="view-link" data-zh="打开演示 ↗" data-en="OPEN DEMO ↗">OPEN DEMO ↗</span></div>
+        <div class="feature-art">
+          <img class="cognia-square" src="./images/cognia.png" alt="CognIA app interface preview" />
+          <span class="art-label">TEAM PROJECT / 2026</span>
+        </div>
+        <div class="feature-copy">
+          <div>
+            <h2>CognIA</h2>
+            <p class="short-copy" data-zh="面向儿童的英语学习应用，围绕阅读、听力、写作与解码设计学习模块，并参与交互设计与前后端集成。" data-en="A children's English learning app built around reading, listening, writing, and decoding, with work across learning modules, interaction design, and full-stack integration.">面向儿童的英语学习应用，围绕阅读、听力、写作与解码设计学习模块，并参与交互设计与前后端集成。</p>
+          </div>
+          <span class="view-link" data-zh="打开演示 ↗" data-en="OPEN DEMO ↗">OPEN DEMO ↗</span>
+        </div>
       </a>
       <div class="section-label section-label-more"><span data-zh="更多作品" data-en="MORE WORK">MORE WORK</span><span data-zh="精选项目" data-en="SELECTED PROJECTS">SELECTED PROJECTS</span></div>
       <div class="project-list">
-        <a class="project-row radar-row" href="https://github.com/fyinran-netizen/job_search_radar" target="_blank" rel="noreferrer"><div class="mini-art"><img src="./job-search-radar-generated.png" alt="Job Search Radar visual" /><span class="art-tag" data-zh="岗位搜索 / 匹配" data-en="SEARCH / MATCH">SEARCH / MATCH</span></div><div class="row-copy"><div><h3>Job Search Radar</h3><p data-zh="基于 LangGraph 的岗位搜索 Agent，自动搜索校招岗位、提取关键信息，并按照个人条件完成匹配和去重，让找工作这件事更高效。" data-en="A LangGraph-based job search agent that discovers graduate roles, extracts key details, matches opportunities, and removes duplicates.">基于 LangGraph 的岗位搜索 Agent，自动搜索校招岗位、提取关键信息，并按照个人条件完成匹配和去重，让找工作这件事更高效。</p></div></div><span class="row-arrow" data-zh="查看项目 ↗" data-en="VIEW PROJECT ↗">VIEW PROJECT ↗</span></a>
-        <a class="project-row diagnosis-row" href="https://github.com/fyinran-netizen/management-diagnosis-agent" target="_blank" rel="noreferrer"><div class="mini-art"><img src="./management-diagnosis-generated.png" alt="Management Diagnosis Agent visual" /><span class="art-tag" data-zh="知识库 / 诊断" data-en="RAG / DIAGNOSE">RAG / DIAGNOSE</span></div><div class="row-copy"><div><h3>Management Diagnosis Agent</h3><p data-zh="结合混合检索、结构化切片与引用约束生成，构建管理知识问答与分析流程，让每个判断都能回到对应的资料依据。" data-en="A RAG-based management knowledge assistant that combines hybrid retrieval, structured chunking, and citation-constrained generation for traceable analysis.">结合混合检索、结构化切片与引用约束生成，构建管理知识问答与分析流程，让每个判断都能回到对应的资料依据。</p></div></div><span class="row-arrow" data-zh="查看项目 ↗" data-en="VIEW PROJECT ↗">VIEW PROJECT ↗</span></a>
-        <a class="project-row frost-row" href="https://frost-hand-magic-toy.vercel.app" target="_blank" rel="noreferrer"><div class="mini-art"><img src="./frost-hand-generated-v3.png" alt="Frost Hand Magic Toy visual" /><span class="art-tag" data-zh="手势 / 绘图" data-en="HAND / DRAW">HAND / DRAW</span></div><div class="row-copy"><div><h3>Frost Hand Magic Toy</h3><p data-zh="一个基于手势识别的互动粒子玩具，用手部动作在屏幕上生成冰雪般的光迹和绘图效果，重点是即时反馈与趣味探索。" data-en="A gesture-controlled particle toy that turns hand movement into icy trails and playful drawing effects.">一个基于手势识别的互动粒子玩具，用手部动作在屏幕上生成冰雪般的光迹和绘图效果，重点是即时反馈与趣味探索。</p></div></div><span class="row-arrow" data-zh="打开体验 ↗" data-en="OPEN TOY ↗">OPEN TOY ↗</span></a>
+        <a class="project-row" href="https://github.com/fyinran-netizen/job_search_radar" target="_blank" rel="noreferrer">
+          <div class="mini-art"><img src="./images/job-search-radar.png" alt="Job Search Radar visual" /><span class="art-tag" data-zh="岗位搜索 / 匹配" data-en="SEARCH / MATCH">SEARCH / MATCH</span></div>
+          <div class="row-copy">
+            <h3>Job Search Radar</h3>
+            <p data-zh="基于 LangGraph 的岗位搜索 Agent，自动搜索校招岗位、提取关键信息，并按照个人条件完成匹配和去重，让找工作这件事更高效。" data-en="A LangGraph-based job search agent that discovers graduate roles, extracts key details, matches opportunities, and removes duplicates.">基于 LangGraph 的岗位搜索 Agent，自动搜索校招岗位、提取关键信息，并按照个人条件完成匹配和去重，让找工作这件事更高效。</p>
+          </div>
+          <span class="row-arrow" data-zh="查看项目 ↗" data-en="VIEW PROJECT ↗">VIEW PROJECT ↗</span>
+        </a>
+        <a class="project-row" href="https://github.com/fyinran-netizen/management-diagnosis-agent" target="_blank" rel="noreferrer">
+          <div class="mini-art"><img src="./images/management-diagnosis-agent.png" alt="Management Diagnosis Agent visual" /><span class="art-tag" data-zh="知识库 / 诊断" data-en="RAG / DIAGNOSE">RAG / DIAGNOSE</span></div>
+          <div class="row-copy">
+            <h3>Management Diagnosis Agent</h3>
+            <p data-zh="结合混合检索、结构化切片与引用约束生成，构建管理知识问答与分析流程，让每个判断都能回到对应的资料依据。" data-en="A RAG-based management knowledge assistant that combines hybrid retrieval, structured chunking, and citation-constrained generation for traceable analysis.">结合混合检索、结构化切片与引用约束生成，构建管理知识问答与分析流程，让每个判断都能回到对应的资料依据。</p>
+          </div>
+          <span class="row-arrow" data-zh="查看项目 ↗" data-en="VIEW PROJECT ↗">VIEW PROJECT ↗</span>
+        </a>
+        <a class="project-row" href="https://frost-hand-magic-toy.vercel.app" target="_blank" rel="noreferrer">
+          <div class="mini-art"><img src="./images/frost-hand-magic-toy.png" alt="Frost Hand Magic Toy visual" /><span class="art-tag" data-zh="手势 / 绘图" data-en="HAND / DRAW">HAND / DRAW</span></div>
+          <div class="row-copy">
+            <h3>Frost Hand Magic Toy</h3>
+            <p data-zh="一个基于手势识别的互动粒子玩具，用手部动作在屏幕上生成冰雪般的光迹和绘图效果，重点是即时反馈与趣味探索。" data-en="A gesture-controlled particle toy that turns hand movement into icy trails and playful drawing effects.">一个基于手势识别的互动粒子玩具，用手部动作在屏幕上生成冰雪般的光迹和绘图效果，重点是即时反馈与趣味探索。</p>
+          </div>
+          <span class="row-arrow" data-zh="打开体验 ↗" data-en="OPEN TOY ↗">OPEN TOY ↗</span>
+        </a>
       </div>
     </section>
   </main>
-  <footer class="footer wrap"><span data-zh="冯音然" data-en="YINRAN_FENG">YINRAN_FENG</span><span data-zh="AI 产品 / 交互 / 代码" data-en="AI PRODUCT / INTERACTION / CODE">AI PRODUCT / INTERACTION / CODE</span></footer>
+  <footer class="footer wrap">
+    <div class="footer-signature">
+      <span class="footer-mark" aria-hidden="true">✳</span>
+      <div><strong data-zh="冯音然" data-en="YINRAN FENG">YINRAN FENG</strong><small data-zh="作品集 · 2026" data-en="PORTFOLIO · 2026">PORTFOLIO · 2026</small></div>
+    </div>
+    <a class="back-top" href="#top" data-zh="返回顶部 ↑" data-en="BACK TO TOP ↑">BACK TO TOP ↑</a>
+  </footer>
   <script src="./script.js"></script>
 </body>
 </html>
