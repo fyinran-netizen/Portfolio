@@ -1,7 +1,7 @@
 document.querySelectorAll('a[href^="#"]').forEach(link=>{link.addEventListener('click',event=>{const target=document.querySelector(link.getAttribute('href'));if(target){event.preventDefault();target.scrollIntoView({behavior:'smooth'})}})});
 const contactCard=document.querySelector('#contact-card');
-const copyButton=document.querySelector('[data-copy]');
-if(copyButton){copyButton.addEventListener('click',async event=>{const button=event.currentTarget;await navigator.clipboard.writeText(button.dataset.copy);const label=button.querySelector('b');label.textContent='copied';setTimeout(()=>label.textContent='copy',1200)})}
+const copyButtons=document.querySelectorAll('[data-copy]');
+copyButtons.forEach(button=>{button.addEventListener('click',async event=>{const target=event.currentTarget;await navigator.clipboard.writeText(target.dataset.copy);const label=target.querySelector('.copy-label');if(label){label.textContent=language==='zh'?'已复制':'Copied';setTimeout(()=>{label.textContent=language==='zh'?'复制':'Copy'},1200)}})});
 const languageSelect=document.querySelector('#language-select');
 const translatable=document.querySelectorAll('[data-zh][data-en]');
 let language='zh';
